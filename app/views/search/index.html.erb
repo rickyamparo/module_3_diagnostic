@@ -1,0 +1,32 @@
+<h1>Stations Near You</h1>
+
+
+<ol class="station-list">
+<% @stations.each do |station| %>
+<li class="station">
+  <ul>
+    <li class="name">
+    <%= station.name %>
+    </li>
+
+    <li class="address">
+    <%= station.address %>
+    </li>
+
+    <li class="fuel-type">
+    <%= station.fuel_type %>
+    </li>
+
+    <li class="distance">
+    <%= station.distance %>
+    </li>
+
+    <li class="access-times">
+    <%= station.access_times %>
+    </li>
+
+  </ul>
+</li>
+<% end %>
+
+</ol>

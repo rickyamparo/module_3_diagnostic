@@ -1,5 +1,7 @@
 class Station
 
+  attr_accessor :name, :address, :fuel_type, :distance, :access_times
+
   def initialize(station_hash)
     @name = station_hash[:station_name]
     @address = station_hash[:street_address]

@@ -10,6 +10,5 @@ class SearchController < ApplicationController
     raw_stations.each do |station|
       @stations << Station.new(station)
     end
-    binding.pry
   end
 end
