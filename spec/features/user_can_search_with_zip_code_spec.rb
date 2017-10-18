@@ -12,6 +12,7 @@ RSpec.describe "fuel search function" do
     expect(page).to have_css('.station-list')
     within('.station-list') do
       within first('.station') do
+
         expect('.station').to have_css('.name')
         expect('.station').to have_css('.address')
         expect('.station').to have_css('.fuel-type')
