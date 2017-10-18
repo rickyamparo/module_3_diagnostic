@@ -6,6 +6,6 @@ class SearchController < ApplicationController
     end
     response = @conn.get("https://api.data.gov/nrel/alt-fuel-stations/v1/nearest.json?location=80203&radius=6.0&limit=10.0").body
     raw_stations = JSON.parse(response, symbolize_names: true)
-
+    binding.pry
   end
 end
