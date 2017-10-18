@@ -11,6 +11,6 @@ RSpec.describe "fuel search function" do
     fill_in "q", :with => "80203"
     click_on "Locate"
     expect(current_path).to eq('/search')
-    expect(current_url).to have_content('zipcode=80203')
+    expect(current_url).to have_content('q=80203')
   end
 end
