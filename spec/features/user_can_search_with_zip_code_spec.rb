@@ -10,6 +10,9 @@ RSpec.describe "fuel search function" do
     click_on "Locate"
     expect(current_path).to eq('/search')
     expect(current_url).to have_content('q=80203')
-    expect(page).to have_css('.list')
+    expect(page).to have_css('.station-list')
+    within('.station-list') do
+      expect
+    end
   end
 end
