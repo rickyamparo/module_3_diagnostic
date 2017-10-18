@@ -5,7 +5,7 @@ class SearchController < ApplicationController
       faraday.headers["X-Api-Key"] = ENV["X-API-KEY"]
     end
     response = @conn.get("https://api.data.gov/nrel/alt-fuel-stations/v1/nearest.json?location=80203&radius=6.0&limit=10.0&fuel_type=ELEC,LPG").body
-    raw_stations = JSON.parse(response, symbolize_names: true)
+    raw_stations = JSON.parse(response, symbolize_names: true)[:fuel_stations]
     binding.pry
   end
 end
